@@ -40,7 +40,7 @@ var Router = Backbone.Router.extend({
             }));
       },
 
-      // might use this for user accounts in the future
+    // might use this for user accounts in the future
     // users: function() {
     //   $('#content').empty();
 
@@ -71,25 +71,6 @@ var Router = Backbone.Router.extend({
                 image_set: response
             }));
         });
-
-        //maybe use for likes in the future
-        // $.ajax({
-        //     url: 'https://pixelect-rails-api.herokuapp.com/total_likes/' + id,
-        //     type: 'GET'
-        // }).done(function(response) {
-        //     var template = Handlebars.compile($('#imageSetTemplate').html());
-        //       $('#likesTotal').html(template({
-        //     }));
-        // });
-        // is this going to do anything?
-        // $.ajax({
-        //     url: 'https://pixelect-rails-api.herokuapp.com/total_likes/' + id,
-        //     type: 'POST'
-        // }).done(function(response) {
-        //     var template = Handlebars.compile($('#imageSetTemplate').html());
-        //       $('#likesTotal').html(template({
-        //     }));
-        // });
     },
 
     images: function() {
@@ -160,12 +141,15 @@ var Router = Backbone.Router.extend({
 
     var create_like = function() {
          $.ajax({
-                url: 'https://pixelect-rails-api.herokuapp.com/total_likes/' + id,
-                type: 'POST'
+                url: 'https://pixelect-rails-api.herokuapp.com/likes',
+                type: 'POST',
+                data: {like: { image_id: $(this).attr("data-id") }
+                }
             }).done(function(response) {
-                var template = Handlebars.compile($('#imageSetTemplate').html());
-                  $('#likesTotal').html(template({
-                }));
+                console.log(response)
+                // var template = Handlebars.compile($('#imageSetTemplate').html());
+                //   $('#likesTotal').html(template({
+                // }));
             });
         };
 
@@ -173,15 +157,9 @@ var Router = Backbone.Router.extend({
 $(document).ready(function () {
   $('#content').on('click', '#submitComment', comment_post);
   $('#content').on('click', '#submit-picture-set', create_image_set);
-  $('#pop_script').on('click', '.imageToClick', function() {
-    alert('it worked! this image id is ' + $(this).attr('data-id'));
-  });
-  $('#rec_script').on('click', '.imageToClick', function() {
-    alert('it worked! this image id is ' + $(this).attr('data-id'));
-  });
-   $('#content').on('click', '.clickImage', function() {
-    alert('it worked! this image id is ' + $(this).attr('data-id'));
-  });
+  $('#pop_script').on('click', '.imageToClick', create_like);
+  $('#rec_script').on('click', '.imageToClick', create_like);
+  $('#content').on('click', '.clickImage', create_like);
 });
 
 var router = new Router();
