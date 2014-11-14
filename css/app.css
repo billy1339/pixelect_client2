@@ -29,42 +29,36 @@ html, body {
 
 #nav_custom1 {
 	color: #fdfdfd;
-	font-family: 'Hammersmith One', sans-serif;
 	font-size: 20px;
 	vertical-align: sub;
 }
 
 #nav_custom2 {
 	color: #fdfdfd;
-	font-family: 'Hammersmith One', sans-serif;
 	font-size: 20px;
 	vertical-align: sub;
 }
 
 #nav_custom3  {
 	color: #fdfdfd;
-	font-family: 'Hammersmith One', sans-serif;
 	font-size: 20px;
 	vertical-align: sub;
 }
 
 #nav_custom4 {
 	color: #fdfdfd;
-	font-family: 'Hammersmith One', sans-serif;
 	font-size: 20px;
 	vertical-align: sub;
 }
 
 #nav_custom5 {
 	color: #fdfdfd;
-	font-family: 'Hammersmith One', sans-serif;
 	font-size: 20px;
 	vertical-align: sub;
 }
 
 #nav_custom6 {
 	color: #fdfdfd;
-	font-family: 'Hammersmith One', sans-serif;
 	font-size: 20px;
 	vertical-align: sub;
 }
@@ -123,8 +117,9 @@ a {
 }
 
 .total_likes {
-	text-align: center;
+	text-align: left;
 	font-size: 24px;
+	padding-top: 20px;
 }
 
 #comments_div {
@@ -235,6 +230,11 @@ LABEL.inline {
 	opacity: 0.5;
 }
 
+.about {
+	font-size: 20px;
+}
 
-
-
+#exQuestion {
+	color: #265557;
+	font-size: 120%;
+}

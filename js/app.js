@@ -150,10 +150,6 @@ var Router = Backbone.Router.extend({
               var newValue = parseInt(currentValue) + 1;
               $("li[data-id='"+imageId+"']").html(newValue);
               console.log(response.image_id);
-              // var pic_id = $(this).attr("data-id");
-              // var likesDisplay = $('.total_likes');
-              // ('#total_likes').append(likesDisplay);
-              // console.log(likesDisplay);
           });
         };
 

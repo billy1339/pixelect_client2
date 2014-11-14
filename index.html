@@ -180,12 +180,11 @@
     <h5>To navigate back to this page in the future, copy and store the url from your browsers navigation</h5>
 
    <div class="container" id="likes_div">
-      <h4>Likes per photo:</h4>
       <div class="row">
       <ul>
         {{#each image_set.images}}
         <div class="col-xs-4">
-          <li class="total_likes" data-id={{id}}>{{this.likes.length}}</li>
+          <li class="total_likes" data-id={{id}}>{{this.likes.length}}<span class="glyphicon glyphicon-heart"></span></li>
         </div>
         {{/each}}
       </ul>
@@ -219,12 +218,23 @@
 </script>
 
 <script id="aboutTemplate" type="text/x-handlebars-template">
-    <h1>Welcome to Pixelect!</h1>
-
+    <img src="/css/assets/pixelect.jpg" alt="logo">
+    <br>
+    <h1>Welcome!</h1>
     <h4>Pixelect is an online photo-sharing community, created to allow its users to gather opinions about a select set of photos they may upload. <br>
     Users can upload sets of three images with a leading question meant for the community to answer.<br>
-    For example, you may ask, <strong>Which puppy do you think is the cutest?</strong>, along with uploading three images of adorable puppies.<br>
+    For example, you may ask, <a href="http://localhost:4000/#/image_sets/13" id="exQuestion">Which dog do you think is the cutest?</a>, along with uploading three images of adorable puppies.<br>
     Once you upload your image set, we will give you a unique url that you can use to check back in on how the voting went!
+    </h4>
+    <br>
+    <br>
+    <h3>Created by:</h3>
+    <p><a href="https://github.com/IljaGoushcha" title="GitHub" class="about">Ilja Goushcha</a></p>
+    <p><a href="https://github.com/billy1339" title="GitHub" class="about">William Sargent</a></p>
+    <p><a href="https://github.com/laurenfazah" title="GitHub" class="about">Lauren Fazah</a></p>
+    <p><a href="https://github.com/A-team-GA" title="GitHub" class="about">See the code.</a></p>
+
+    
 </script>
 
 
