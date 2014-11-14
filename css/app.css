@@ -133,6 +133,7 @@ a {
 img {
 		max-height: 200px;
 		max-width: 300px;
+		border-radius: 10px;
 }
 
 #content {
