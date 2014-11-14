@@ -122,8 +122,9 @@ a {
 	font-size: 38px;
 }
 
-#total_likes {
+.total_likes {
 	text-align: center;
+	font-size: 24px;
 }
 
 #comments_div {
@@ -172,7 +173,8 @@ INPUT, TEXTAREA, SELECT {
 	display: inline-block;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
-	margin-bottom: 10px
+	margin-bottom: 10px;
+	color: gray;
 }
 
 INPUT[type="radio"] {

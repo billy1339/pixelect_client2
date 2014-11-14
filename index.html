@@ -83,7 +83,6 @@
 
 <div class="container">
   <div id="content"></div>
-  <!-- <div id="likesTotal"></div> -->
 </div>
 
 <!-- end JS container -->
@@ -183,10 +182,10 @@
    <div class="container" id="likes_div">
       <h4>Likes per photo:</h4>
       <div class="row">
-      <ul id="total_likes">
+      <ul>
         {{#each image_set.images}}
         <div class="col-xs-4">
-          <li>{{this.likes.length}}</li>
+          <li class="total_likes" data-id={{id}}>{{this.likes.length}}</li>
         </div>
         {{/each}}
       </ul>

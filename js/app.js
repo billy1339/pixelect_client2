@@ -115,7 +115,6 @@ var Router = Backbone.Router.extend({
               $('#bodyOfComments').append(template({
                 comment: response.body
             }));
-
         });
     };
 
@@ -146,11 +145,16 @@ var Router = Backbone.Router.extend({
                 data: {like: { image_id: $(this).attr("data-id") }
                 }
             }).done(function(response) {
-                console.log(response)
-                // var template = Handlebars.compile($('#imageSetTemplate').html());
-                //   $('#likesTotal').html(template({
-                // }));
-            });
+              var imageId = response.image_id;
+              var currentValue = $("li[data-id='"+imageId+"']").html();
+              var newValue = parseInt(currentValue) + 1;
+              $("li[data-id='"+imageId+"']").html(newValue);
+              console.log(response.image_id);
+              // var pic_id = $(this).attr("data-id");
+              // var likesDisplay = $('.total_likes');
+              // ('#total_likes').append(likesDisplay);
+              // console.log(likesDisplay);
+          });
         };
 
 
